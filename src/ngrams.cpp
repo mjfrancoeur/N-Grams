@@ -41,18 +41,7 @@ int main() {
             break;
         }
         generateRandomText(nGramMap, numRWords);
-        
-        // int kInt = 1;
-        // for (Vector<string> key : nGramMap) {
-        //     for (string kWord : key) {
-        //         cout << kInt << kWord << endl;
-        //     }
-        //     Vector<string> val = nGramMap[key];
-        //     for (string word : val) {
-        //         cout << kInt << word << endl;
-        //     }
-        //     kInt++;
-        // }
+      
     }
     
     cout << "Exiting." << endl;
@@ -130,6 +119,7 @@ Vector<string> queueToVector(Queue<string> q) {
     return vec;
 }
 
+// TODO: Finish this comment.
 void populateMap(Vector<string> & key, string value, Queue<string> & queue, Map<Vector<string>, Vector<string> > & map) {
        key = queueToVector(queue);
        if (map.containsKey(key)) {
@@ -144,6 +134,7 @@ void populateMap(Vector<string> & key, string value, Queue<string> & queue, Map<
        queue.enqueue(value);
 }
 
+// TODO: Finish this comment.
 void generateRandomText(Map<Vector<string>, Vector<string> > & map, int numWords) {
     Vector<string> result;
 
@@ -178,12 +169,14 @@ void printResultToConsole(Vector<string> & v) {
     cout << "\n" << endl;
 }
 
+// Returns a random string from the vector argument.
 string pickRandomStringFromVector(Vector<string> & v) {
     int random = randomInteger(0, v.size() - 1);
     return v[random];
 }
 
-Vector<string> pickRandomQueueFromVector(Vector<Vector<string> > & v) {
+// Returns a random vector element from the argument.
+Vector<string> pickRandomVectorFromVector(Vector<Vector<string> > & v) {
     int random = randomInteger(0, v.size() - 1);
     return v[random];
 }
