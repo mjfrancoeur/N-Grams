@@ -25,7 +25,7 @@ int getN();
 int getNumberOfRandomWords();
 void generateRandomText(Map<Vector<string>, Vector<string> > & map, int numWords);
 string pickRandomStringFromVector(Vector<string> & v);
-Vector<string> pickRandomQueueFromVector(Vector<Vector<string> > & v);
+Vector<string> pickRandomVectorFromVector(Vector<Vector<string> > & v);
 void printResultToConsole(Vector<string> & v);
 
 int main() {
@@ -140,7 +140,7 @@ void generateRandomText(Map<Vector<string>, Vector<string> > & map, int numWords
 
     // Start the random text with random set of n-1 words
     Vector<Vector<string> > keysVec = map.keys();
-    Vector<string> start = pickRandomQueueFromVector(keysVec); 
+    Vector<string> start = pickRandomVectorFromVector(keysVec); 
     Queue<string> keyQ; // Initialize a queue to hold the key (prefix) values of size n-1.
     for (string word : start) {
         result.add(word);
