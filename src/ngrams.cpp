@@ -1,5 +1,3 @@
-// TODO: Edit this comment
-
 #include <cctype>
 #include <cmath>
 #include <fstream>
@@ -48,6 +46,9 @@ int main() {
     return 0;
 }
 
+/*
+ * Reads out greeting script to user
+ */
 void greeting() {
     cout << "Welcome to CS 106B Random Writer ('N-Grams')." << endl;
     cout << "This program makes random text based on a document." << endl;
@@ -119,7 +120,7 @@ Vector<string> queueToVector(Queue<string> q) {
     return vec;
 }
 
-// TODO: Finish this comment.
+// Populate map
 void populateMap(Vector<string> & key, string value, Queue<string> & queue, Map<Vector<string>, Vector<string> > & map) {
        key = queueToVector(queue);
        if (map.containsKey(key)) {
@@ -134,7 +135,7 @@ void populateMap(Vector<string> & key, string value, Queue<string> & queue, Map<
        queue.enqueue(value);
 }
 
-// TODO: Finish this comment.
+// Generate random text
 void generateRandomText(Map<Vector<string>, Vector<string> > & map, int numWords) {
     Vector<string> result;
 
